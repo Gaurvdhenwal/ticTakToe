@@ -102,18 +102,18 @@ export class GameComponent implements OnInit {
         var canPlay = this.ifCompWinsInNextMove(currentGame, i)
         //  let canPlayer = this.ifPlayerWinsInNextMove(currentGame)
         console.log('computer canPlay this iteration ', canPlay)
-        if (canPlay > 0) {
+        if (canPlay > 0) { // either computer can win or plyer can't win
 
           console.log('computer choosen move ', i)
           this.boxes[i] = 'o';
           this.currentPlayer = 'x';
-          if (canPlay == 10)
+          if (canPlay == 10) // then computer will win
             setTimeout(() => {
               this.gameResult('o');
             }, 200);
           break;
         }
-        else if (canPlay < 0) {
+        else if (canPlay < 0) { // if player can win make this move a mostEffectivePlay
           mostEffectivePlay = i
         }
 
