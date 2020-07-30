@@ -1,0 +1,106 @@
+.main_cont {
+  background-color: #4b7e7f;
+  height: 100vh;
+  background-image: url('../../assets/images/background.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 100vh;
+  width: 100vw;
+
+  .top-cont {
+    background-color: aliceblue;
+    padding: 10px 0px;
+    font-family: 'Roboto-Cond-Bold';
+    text-align: center;
+    #playerValue{
+        margin:0px;
+        color:#757575;
+        font-size: 2rem;
+        transition: transform 1s;
+        @media(max-width:320px){
+            font-size: 0.8rem;
+        }
+    }
+  }
+
+  .play-cont {
+    // border:1px solid red;
+    height: 90vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media(max-width:375px) {
+      height: 80vh;
+    }
+    .playing-board{
+        height:310px;
+        width:310px;
+        border:10px solid green;
+        border-radius:10px;
+
+    }
+    .box{
+        border:1px solid green;
+        height: 98px;
+        width: 100px;
+        margin:0px;
+        padding:0px;
+         display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Baloo Da 2', cursive;
+        font-weight: 800;
+        font-size: 6rem;
+    }
+    .tic{
+      background-color: #76ff03;
+    }
+
+    .tac {
+      background-color: #e53935;
+    }
+
+    .gameOver {
+      .game-over-txt,
+      .point {
+
+        font-family: 'Baloo Da 2', cursive;
+        font-weight: 800;
+        color: darkslategrey;
+        font-size: 4.5rem;
+        transition: transform 0.2s ease-out;
+        animation-fill-mode: forwards;
+        text-align: center;
+        font-size: 3rem;
+
+        @media(max-width:375px) {
+          font-size: 4rem;
+        }
+      }
+
+      .point {
+        font-size: 2rem;
+        color: darkgoldenrod;
+      }
+    }
+
+    .play-again-btn {
+      font-family: 'Baloo Da 2', cursive;
+      font-size: 1.5rem;
+      color: #fff;
+      background-color: darkslategrey;
+      width: 55vw;
+      border-radius: 10px;
+      text-align: center;
+      padding: 0.5rem;
+      margin-bottom: 10vh;
+    }
+  }
+
+
+}
